@@ -51,6 +51,7 @@ module Ohcount
 			metafont = LineCommentMonoglot.new("metafont", "%");
 			metapost = LineCommentMonoglot.new("metapost", "%");
 			objective_c = CMonoglot.new("objective_c", '//',             [e('/*'), e('*/')], true,  false)
+			ocaml = CMonoglot.new("ocaml",             nil,              [e('(*'), e('*)')], true,  false)
 			pascal = CMonoglot.new("pascal",           '//',             ['{','}'],          true,  true, {:no_escape_dquote => true, :no_escape_squote => true})
 			perl = CMonoglot.new("perl",               '#',              ['^=\\\\w+', '^=cut[ \t]*\\\\n'],  true,  true)
 			phplanguage = CMonoglot.new("php",         ['//', '#'],             [e('/*'), e('*/')], true,  true, {:polyglot_name => 'phplanguage'})
@@ -119,6 +120,7 @@ module Ohcount
 				metafont,
 				metapost,
 				objective_c,
+				ocaml,
 				pascal ,
 				perl ,
 				pike ,
